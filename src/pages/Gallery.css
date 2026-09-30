@@ -1,0 +1,149 @@
+.gallery-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: #f3f4f8;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .45s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(28,21,93,.55);
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.gallery-overlay i {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #a52b26;
+  font-size: 1.2rem;
+  transform: scale(.7);
+  transition: .3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-card:hover .gallery-overlay i {
+  transform: scale(1);
+}
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(8,7,25,.92);
+  animation: modalIn .2s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.gallery-modal-content {
+  max-width: min(1000px, 82vw);
+  max-height: 90vh;
+  text-align: center;
+  color: #fff;
+}
+
+.gallery-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+
+.gallery-modal-content div {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.gallery-close,
+.gallery-arrow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255,255,255,.10);
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.gallery-close {
+  top: 25px;
+  right: 25px;
+}
+
+.gallery-prev {
+  left: 25px;
+}
+
+.gallery-next {
+  right: 25px;
+}
+
+.gallery-close:hover,
+.gallery-arrow:hover {
+  color: #30248f;
+  background: #fff5c7;
+  transform: scale(1.06);
+}
+
+@media (max-width: 767px) {
+  .gallery-modal {
+    padding: 18px;
+  }
+
+  .gallery-modal-content {
+    max-width: 90vw;
+  }
+
+  .gallery-arrow {
+    top: auto;
+    bottom: 25px;
+  }
+
+  .gallery-prev {
+    left: 25px;
+  }
+
+  .gallery-next {
+    right: 25px;
+  }
+}

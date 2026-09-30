@@ -1,0 +1,63 @@
+.class-hero {
+  padding: 85px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,245,199,.16), transparent 30%),
+    linear-gradient(135deg, #1c155d, #30248f);
+}
+
+.class-icon {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  color: #30248f;
+  background: #fff5c7;
+  font-size: 1.5rem;
+}
+
+.class-hero h1 {
+  margin: 12px 0;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+}
+
+.class-hero p {
+  max-width: 720px;
+  color: rgba(255,255,255,.80);
+  line-height: 1.8;
+}
+
+.class-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #eceef5;
+  border-radius: 12px;
+  background: #fff;
+  color: #1c155d;
+  font-weight: 700;
+}
+
+.class-feature i {
+  color: #a52b26;
+}
+
+.class-side-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: #fff5c7;
+  box-shadow: 0 15px 40px rgba(28,21,93,.08);
+}
+
+.class-side-card h3 {
+  color: #1c155d;
+}
+
+.class-side-card ul {
+  padding-left: 20px;
+  color: #5f6274;
+  line-height: 2;
+}

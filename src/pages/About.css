@@ -1,0 +1,43 @@
+.about-logo-card {
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #fff5c7, #fff);
+  box-shadow: 0 18px 45px rgba(28,21,93,.08);
+  overflow: hidden;
+}
+
+.about-logo-card img {
+  width: min(300px, 70%);
+  border-radius: 50%;
+  transition: .4s ease;
+}
+
+.about-logo-card:hover img {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.about-quote {
+  margin-top: 25px;
+  padding: 20px 22px;
+  border-left: 4px solid #a52b26;
+  border-radius: 0 12px 12px 0;
+  color: #30248f;
+  background: #fff8d9;
+  font-weight: 800;
+}
+
+.about-quote i {
+  margin-right: 8px;
+  color: #a52b26;
+}
+
+.about-values {
+  background: #f8f8fc;
+}
+
+.text-school {
+  color: #30248f;
+  font-weight: 700;
+}
